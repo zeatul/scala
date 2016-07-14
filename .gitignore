@@ -1,0 +1,64 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+
+*.war
+*.ear
+
+.settings
+target
+output
+*.classpath
+*.project
+*.bak
+*.iml
+*.pdb
+*.sws
+*.tmp
+
+
+/*.jar
+*.log
+/build
+/lib
+/out
+/output*
+ch*/maxwidget
+snippet/actual
+target
+/target
+.classpath
+.project
+.pydevproject
+.settings
+metastore_db
+
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+
+*.class
+*.log
+
+# sbt specific
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+sbt/*.jar
+mini-complete-example/sbt/*.jar
+
+# Scala-IDE specific
+.scala_dependencies
+
+#Emacs
+*~
+
+#ignore the metastore
+metastore_db/*

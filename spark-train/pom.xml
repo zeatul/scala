@@ -1,0 +1,253 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.hawk</groupId>
+	<artifactId>spark-train</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>${project.artifactId}</name>
+	<description>My wonderfull scala app</description>
+	<inceptionYear>2015</inceptionYear>
+	<licenses>
+		<license>
+			<name>My License</name>
+			<url>http://....</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<properties>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<encoding>UTF-8</encoding>
+		<scala.version>2.10.4</scala.version>
+		<scala.compat.version>2.10</scala.compat.version>
+		<lzo.version>1.0.5</lzo.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- Jetty demmo -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-client</artifactId>
+			<version>8.1.19.v20160209</version>
+		</dependency>
+
+		<!-- lzo -->
+		<dependency>
+			<groupId>org.anarres.lzo</groupId>
+			<artifactId>lzo-hadoop</artifactId>
+			<version>${lzo.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.anarres.lzo</groupId>
+			<artifactId>lzo-core</artifactId>
+			<version>${lzo.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.anarres.lzo</groupId>
+			<artifactId>lzo-commons</artifactId>
+			<version>${lzo.version}</version>
+		</dependency>
+
+		<!-- opencsv -->
+		<dependency>
+			<groupId>au.com.bytecode</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>2.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+			<version>${scala.version}</version>
+		</dependency>
+
+		<!-- Spark Steaming -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming_${scala.compat.version}</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+		<!-- spark hive -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-hive_${scala.compat.version}</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+		<!-- spark sql -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_${scala.compat.version}</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+		<!-- mllib -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-mllib_${scala.compat.version}</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+		<!-- HDFS -->
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-client</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+
+		<!-- spark-core -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_${scala.compat.version}</artifactId>
+			<version>1.6.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming-kafka_${scala.compat.version}</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming-kafka-assembly_${scala.compat.version}</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+		<!-- >spark-streaming-flume -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming-flume_${scala.compat.version}</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming-flume-assembly_${scala.compat.version}</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+		<!-- cassandra -->
+		<dependency>
+			<groupId>com.datastax.spark</groupId>
+			<artifactId>spark-cassandra-connector_${scala.compat.version}</artifactId>
+			<version>1.6.0-M2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.datastax.spark</groupId>
+			<artifactId>spark-cassandra-connector-java_${scala.compat.version}</artifactId>
+			<version>1.6.0-M1</version>
+		</dependency>
+
+		<!-- Elastic search connector -->
+
+		<dependency>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch-hadoop-mr</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>
+		</dependency>
+
+		<!-- Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- <dependency> <groupId>org.specs2</groupId> <artifactId>specs2-core_${scala.compat.version}</artifactId> 
+			<version>2.4.16</version> <scope>test</scope> </dependency> -->
+
+		<dependency>
+			<groupId>org.specs2</groupId>
+			<artifactId>specs2-core_2.10</artifactId>
+			<version>3.7.2</version>
+		</dependency>
+		<!-- <dependency> <groupId>org.scalatest</groupId> <artifactId>scalatest_${scala.compat.version}</artifactId> 
+			<version>2.2.4</version> <scope>test</scope> </dependency> -->
+
+		<dependency>
+			<groupId>org.scalatest</groupId>
+			<artifactId>scalatest_2.10</artifactId>
+			<version>3.0.0-M16-SNAP4</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<!-- <sourceDirectory>src/main/scala</sourceDirectory> <testSourceDirectory>src/test/scala</testSourceDirectory> -->
+		<plugins>
+			<plugin>
+				<!-- see http://davidb.github.com/scala-maven-plugin -->
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>scala-maven-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>testCompile</goal>
+						</goals>
+						<configuration>
+							<args>
+								<arg>-make:transitive</arg>
+								<arg>-dependencyfile</arg>
+								<arg>${project.build.directory}/.scala_dependencies</arg>
+							</args>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18.1</version>
+				<configuration>
+					<useFile>false</useFile>
+					<disableXmlReport>true</disableXmlReport>
+					<!-- If you have classpath issue like NoDefClassError,... -->
+					<!-- useManifestOnlyJar>false</useManifestOnlyJar -->
+					<includes>
+						<include>**/*Test.*</include>
+						<include>**/*Suite.*</include>
+					</includes>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.4.3</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- assembley , 将所有依赖打入jar包 -->
+			<!-- <plugin> <artifactId>maven-assembly-plugin</artifactId> <version>2.5.5</version> 
+				<configuration> <appendAssemblyId>false</appendAssemblyId> <descriptorRefs> 
+				<descriptorRef>jar-with-dependencies</descriptorRef> </descriptorRefs> <archive> 
+				<manifest> <mainClass>com.ccb.WordCount</mainClass> </manifest> </archive> 
+				</configuration> <executions> <execution> <id>make-assembly</id> <phase>package</phase> 
+				<goals> <goal>assembly</goal> </goals> </execution> </executions> </plugin> -->
+		</plugins>
+	</build>
+</project>
